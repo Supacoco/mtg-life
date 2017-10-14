@@ -15,9 +15,11 @@ export default class Player extends Component {
 
     render () {
         return (
-            <div className="player">
+            <div className="player-container">
                 <MinusButton onLoseLife={() => this.loseLife() } />
-                <div>{this.state.life}</div>
+                <div className="player">
+                    <div>{this.state.life}</div>
+                </div>
                 <PlusButton onGainLife={() => this.gainLife() } />
             </div>
         )
